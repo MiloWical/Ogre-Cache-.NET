@@ -1,4 +1,4 @@
-# Ogre-Cache-Cs
+# Ogre Cache .NET
 A C#-implemented layered caching model that's useful for tailoring caching behavior.
 
 <p align="center">
