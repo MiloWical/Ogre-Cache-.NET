@@ -14,7 +14,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <AdditionalFiles Include=".stylecop/stylecop.json" />
+    <AdditionalFiles Include="../../.stylecop/stylecop.json" />
     <PackageReference Include="WicalWare.ResultCs" Version="0.*" />
   </ItemGroup>
   <PropertyGroup>
