@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Authors>Milo Wical</Authors>
+    <RootNamespace>WicalWare.Components.OgreCache.Abstractions</RootNamespace>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RepositoryUrl>https://github.com/MiloWical/Ogre-Cache-.NET</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <AdditionalFiles Include="../../.stylecop/stylecop.json" />
+    <PackageReference Include="WicalWare.ResultCs" Version="0.*" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PackageReadmeFile>nuget.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\.nuget\nuget.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
