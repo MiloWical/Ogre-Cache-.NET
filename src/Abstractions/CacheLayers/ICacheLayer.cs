@@ -36,22 +36,14 @@ public partial interface ICacheLayer
   Result<IEvictResult, IEvictError> Evict(IEvictCommand evictCommand);
 
   /// <summary>
-  /// Attempts to query the values in the cache.
+  /// Attempts to query the cache.
   /// </summary>
   /// <param name="queryCommand">The command parameters to
-  /// attempt to query a cached value.</param>
+  /// attempt to query the cache. This also defines the target of the lookup.</param>
+  /// <typeparam name="TOutput">The expected type of the retrieved value.</typeparam>
   /// <returns>The result of the query attempt, which contains an
   /// <c>IQueryResult</c> if successful, an <c>IQueryError</c> otherwise.</returns>
-  Result<IQueryResult, IQueryError> QueryValues(IQueryCommand queryCommand);
-
-  /// <summary>
-  /// Attempts to query the keys in the cache.
-  /// </summary>
-  /// <param name="queryCommand">The command parameters to
-  /// attempt to query a cached key.</param>
-  /// <returns>The result of the query attempt, which contains an
-  /// <c>IQueryResult</c> if successful, an <c>IQueryError</c> otherwise.</returns>
-  Result<IQueryResult, IQueryError> QueryKeys(IQueryCommand queryCommand);
+  Result<IQueryResult, IQueryError> Query<TOutput>(IQueryCommand<TOutput> queryCommand);
 
   /// <summary>
   /// Attempts to purge (delete) ALL values from the cache.
