@@ -21,9 +21,10 @@ public partial interface ICacheLayer
   /// </summary>
   /// <param name="retrieveCommand">The command parameters to
   /// attempt to retrieve a cached value.</param>
+  /// <typeparam name="TOutput">The expected type of the retrieved value.</typeparam>
   /// <returns>The result of the retrieval attempt, which contains an
   /// <c>IRetrieveResult</c> if successful, an <c>IRetrieveError</c> otherwise.</returns>
-  Result<IRetrieveResult, IRetrieveError> Retrieve(IRetrieveCommand retrieveCommand);
+  Result<IRetrieveResult, IRetrieveError> Retrieve<TOutput>(IRetrieveCommand<TOutput> retrieveCommand);
 
   /// <summary>
   /// Attempts to evict (delete) a value from the cache.
